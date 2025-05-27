@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// 1.1. Открыть (или создать и открыть) файл файловой системы
+//Открыть (или создать и открыть) файл файловой системы
 FILE* open_or_create_file(const char* filename) {
     FILE* file = fopen(filename, "r+");
     if (file == NULL) {
@@ -11,7 +11,7 @@ FILE* open_or_create_file(const char* filename) {
     return file;
 }
 
-// 1.2. Просмотреть содержимое файла внутри файловой системы
+//Просмотреть содержимое файла внутри файловой системы
 char* view_file_content(const char* filename, FILE* fs_file) {
     if (fs_file == NULL) return NULL;
 
@@ -51,7 +51,7 @@ char* view_file_content(const char* filename, FILE* fs_file) {
     return result;
 }
 
-// 1.3. Удалить файл внутри файловой системы
+//Удалить файл внутри файловой системы
 int delete_file(const char* filename, FILE* fs_file) {
     if (fs_file == NULL) return -1;
 
