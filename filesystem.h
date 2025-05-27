@@ -2,22 +2,11 @@
 #define FILESYSTEM_H
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-// Создание нового файла
-int create_file(const char* filename);
+FILE* open_or_create_filesystem(const char* filename);
+char* view_file_in_filesystem(const char* fs_content, const char* filename);
+int delete_file_in_filesystem(char** fs_content, const char* filename);
+int create_new_file_in_filesystem(char** fs_content, const char* filename, const char* content);
+int modify_file_in_filesystem(char** fs_content, const char* filename, const char* new_content);
 
-// Удаление файла
-int delete_file(const char* filename);
-
-// Запись данных в файл
-int write_to_file(const char* filename, const char* data);
-
-// Чтение данных из файла
-char* read_from_file(const char* filename);
-
-// Проверка существования файла
-int file_exists(const char* filename);
-
-#endif // FILESYSTEM_H
+#endif
