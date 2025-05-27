@@ -81,18 +81,30 @@ int delete_file(const char* filename, FILE* fs_file);
 3. При компиляции укажите оба исходных файла:
 gcc main.c filesystem.c -o myprogram
 
-Доступные функции:
-// Открытие/создание файловой системы
-FILE* open_or_create_filesystem(const char* filename);
+### Руководство по использованию команд
 
-// Просмотр содержимого файла
-char* view_file_in_filesystem(const char* fs_content, const char* filename);
+Синтаксис команд:
+создать <имя_файла> <содержимое>
+удалить <имя_файла>
+изменить <имя_файла> <новое_содержимое>
+просмотреть <имя_файла>
+помощь - показать список команд
+выход - завершить программу
 
-// Удаление файла
-int delete_file_in_filesystem(char** fs_content, const char* filename);
+Примеры использования:
+1. Создание файла:
+> создать test.txt Привет_мир
+Файл 'test.txt' успешно создан
 
-// Создание нового файла
-int create_new_file_in_filesystem(char** fs_content, const char* filename, const char* content);
+2. Просмотр файла:
+> просмотреть test.txt
+Привет_мир
 
-// Изменение файла
-int modify_file_in_filesystem(char** fs_content, const char* filename, const char* new_content);
+3. Изменение файла:
+> изменить test.txt Новое_содержимое
+Файл 'test.txt' успешно изменен
+
+4. Удаление файла:
+> удалить test.txt
+Файл 'test.txt' успешно удален
+
