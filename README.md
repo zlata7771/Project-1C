@@ -1,7 +1,7 @@
 # Project-1C
 Каюкина Злата и Николаева Полина 0907-32
 
-#### open_or_create_file
+## open_or_create_file
 C
 
 FILE* open_or_create_file(const char* filename);
@@ -15,7 +15,7 @@ FILE* open_or_create_file(const char* filename);
 
 ---
 
-#### view_file_content
+## view_file_content
 C
 
 char* view_file_content(const char* filename, FILE* fs_file);
@@ -30,7 +30,7 @@ char* view_file_content(const char* filename, FILE* fs_file);
 
 ---
 
-#### delete_file
+## delete_file
 C
 
 int delete_file(const char* filename, FILE* fs_file);
