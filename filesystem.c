@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "filesystem.h"
+
 //Открыть (или создать и открыть) файл файловой системы
 FILE* open_or_create_file(const char* filename) {
     FILE* file = fopen(filename, "r+");
