@@ -137,3 +137,30 @@ SimpleFS - простая и надежная файловая система
 4. Проведено ревью кода между участниками команды
 5. После одобрения PR будет выполнен мердж в main
 
+Наша файловая система предоставляется как библиотека, состоящая из двух файлов:
+- filesystem.h - заголовочный файл с объявлениями функций
+- filesystem.c - реализация функций
+
+Как подключить к проекту:
+
+1. Добавьте оба файла в ваш проект
+2. Включите заголовочный файл в местах использования:
+#include "filesystem.h"
+3. При компиляции укажите оба исходных файла:
+gcc main.c filesystem.c -o myprogram
+
+Доступные функции:
+// Открытие/создание файловой системы
+FILE* open_or_create_filesystem(const char* filename);
+
+// Просмотр содержимого файла
+char* view_file_in_filesystem(const char* fs_content, const char* filename);
+
+// Удаление файла
+int delete_file_in_filesystem(char** fs_content, const char* filename);
+
+// Создание нового файла
+int create_new_file_in_filesystem(char** fs_content, const char* filename, const char* content);
+
+// Изменение файла
+int modify_file_in_filesystem(char** fs_content, const char* filename, const char* new_content);
